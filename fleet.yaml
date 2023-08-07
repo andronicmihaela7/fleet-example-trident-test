@@ -2,7 +2,5 @@ defaultNamespace: reboot-coordinator
   helm:
     repo: https://github.com/flatcar/flatcar-linux-update-operator/
     values:
-      image:
-        repository: ghcr.io/flatcar/flatcar-linux-update-operator
       psp:
         enabled: false
