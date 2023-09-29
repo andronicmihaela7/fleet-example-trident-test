@@ -1,6 +1,15 @@
-defaultNamespace: reboot-coordinator
-helm:
-  repo: https://github.com/flatcar/flatcar-linux-update-operator/
+defaultNamespace: trident-csi
+namespaceLabels:
+  app.kubernetes.io/managed-by: Helm
+  pod-security.kubernetes.io/enforce: privileged
+namespaceAnnotations:
+  meta.helm.sh/release-name: trident
+  meta.helm.sh/release-namespace: trident-csi
+helm: 
+  releaseName: trident
+  repo: https://netapp.github.io/trident-helm-chart
+  chart: trident-operator
+  version: 22.10.0
   values:
-    psp:
-      enabled: false
+    kustomize:
+      dir: overlays
