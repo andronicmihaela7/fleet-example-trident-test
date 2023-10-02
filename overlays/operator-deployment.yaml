@@ -9,9 +9,9 @@ spec:
       app: operator.trident.netapp.io
       io.cattle.field/appId: trident
       name: trident-operator
-    template:
-      metadata:
-        labels:
-          app: operator.trident.netapp.io
-          io.cattle.field/appId: trident
-          name: trident-operator
+  template:
+    metadata:
+      labels:
+        app: operator.trident.netapp.io
+        io.cattle.field/appId: trident
+        name: trident-operator
