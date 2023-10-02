@@ -1,15 +1,14 @@
+#
+# Next iteration: Claim the Trident installation
+
 defaultNamespace: trident-csi
-namespaceLabels:
-  app.kubernetes.io/managed-by: Helm
-  pod-security.kubernetes.io/enforce: privileged
-namespaceAnnotations:
-  meta.helm.sh/release-name: trident
-  meta.helm.sh/release-namespace: trident-csi
-helm: 
+helm:
   releaseName: trident
-  repo: https://netapp.github.io/trident-helm-chart
+  repo: https://artifacts.solvinity.net/repository/helm3-sse-acc/
   chart: trident-operator
   version: 22.10.0
   values:
-    kustomize:
-      dir: overlays
+    kubeletDir: /opt/rke/var/lib/kubelet
+    imageRegistry: harbor.solvinity.net/picard
+kustomize:
+  dir: overlays
