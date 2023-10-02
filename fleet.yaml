@@ -4,11 +4,10 @@
 defaultNamespace: trident-csi
 helm:
   releaseName: trident
-  repo: https://artifacts.solvinity.net/repository/helm3-sse-acc/
+  repo: https://artifacthub.io/packages/helm/netapp-trident
   chart: trident-operator
   version: 22.10.0
   values:
     kubeletDir: /opt/rke/var/lib/kubelet
-    imageRegistry: harbor.solvinity.net/picard
 kustomize:
   dir: overlays
