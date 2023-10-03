@@ -1,6 +1,3 @@
-#
-# Next iteration: Claim the Trident installation
-
 defaultNamespace: trident-csi
 helm:
   releaseName: trident
