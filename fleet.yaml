@@ -1,10 +1,8 @@
 defaultNamespace: trident-csi
 helm:
   releaseName: trident
-  repo: https://artifacthub.io/packages/helm/netapp-trident
+  repo: https://netapp.github.io/trident-helm-chart
   chart: trident-operator
   version: 22.10.0
-  values:
-    kubeletDir: /opt/rke/var/lib/kubelet
 kustomize:
   dir: overlays
