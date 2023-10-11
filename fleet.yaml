@@ -11,6 +11,5 @@ helm:
   repo: https://netapp.github.io/trident-helm-chart
   chart: trident-operator
   version: 22.10.0
-  takeOwnership: true
 kustomize:
   dir: overlays
