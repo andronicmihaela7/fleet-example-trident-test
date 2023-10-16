@@ -1,11 +1,11 @@
 defaultNamespace: trident-csi
 # namespaceLabels are labels that will be appended to the namespace created by Fleet.
-namespaceLabels:
-  meta.helm.sh/release-name: trident
-  meta.helm.sh/release-namespace: trident-csi
+# namespaceLabels:
+#  meta.helm.sh/release-name: trident
+#  meta.helm.sh/release-namespace: trident-csi
 # namespaceAnnotations are annotations that will be appended to the namespace created by Fleet.
-namespaceAnnotations:
-    app.kubernetes.io/managed-by: Helm
+# namespaceAnnotations:
+#    app.kubernetes.io/managed-by: Helm
 helm:
   releaseName: trident
   repo: https://netapp.github.io/trident-helm-chart
